@@ -4,20 +4,35 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var fs = require('fs');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
+const ENV = process.env.NODE_ENV
+if (ENV !== 'production') {
+  // 开发环境 / 测试环境
+  app.use(logger('dev'));
+} else {
+  // 线上环境
+  const logFileName = path.join(__dirname, 'logs', 'access.log')
+  const writeStream = fs.createWriteStream(logFileName, {
+    flags: 'a'
+  })
+  app.use(logger('combined', {
+    stream: writeStream
+  }));
+}
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/index', indexRouter);
-app.use('/users', usersRouter);
+app.use('/port/index', indexRouter);
+app.use('/port/user', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

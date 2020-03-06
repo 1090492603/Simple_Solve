@@ -1,0 +1,40 @@
+{
+       
+  "getHotWord":[{
+      "url":"https://api.jikipedia.com/wiki/get_hot_search",
+        "method":"POST",
+        "headers":{
+            "Content-Type": "application/json"
+        },
+        "map":{
+            "data": [{
+               "content": "data.phrase"
+            }]
+        }   
+  },{
+    "url":"https://api.jikipedia.com/go/search_definitions",
+    "method":"POST",
+    "headers":{
+        "Content-Type": "application/json"
+    },
+    "data":{
+      "phrase": "AO3", 
+      "page": 1
+    },
+    "map":{
+        "data": [{
+           "content": "data.id"
+        }]
+    }   
+  },
+  {
+    "url":"https://jikipedia.com/definition/",
+    "method":"GET",
+    "map":{
+        "data": [{
+           "content": "content"
+        }]
+    }   
+  }
+  ]
+}
