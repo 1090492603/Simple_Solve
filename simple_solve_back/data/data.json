@@ -23,7 +23,8 @@
     },
     "map":{
         "data": [{
-           "content": "data.id"
+           "content": "data.plaintext",
+           "img":"data.full_image"
         }]
     }   
   },
@@ -36,5 +37,40 @@
         }]
     }   
   }
-  ]
+  ],
+  "getHotStem":[
+    {
+      "url": "https://www.lxybaike.com/index.php?list-focus-2-",
+      "method":"GET",
+       "map":{
+      "data": [{
+         "content": "dd span a",
+         "src":"dd span a"
+      }]
+  }   
+
+    },
+    {
+        "url": "http://m.ifanjian.net/jbk/",
+        "method":"GET",
+         "map":{
+        "data": [{
+           "content": "ol li ul li a",
+           "src":"ol li ul li a"
+        }]
+    }   
+  
+      
+    }
+  ],
+  "getThem":[{
+      "url": "https://www.zhihu.com/api/v4/news_specials/list",
+      "method": "GET",
+      "data": {
+          "limit": 10,
+          "offset":10
+      }
+  }]
+
+
 }

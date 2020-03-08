@@ -87,7 +87,7 @@ const comment = seq.define('comment', {
     }
 })
 
-const hotWord = seq.define('hotWord', {
+const hotword = seq.define('hotWord', {
     article: {
         type: Sequelize.TEXT,
         allowNull:false
@@ -102,7 +102,7 @@ const hotWord = seq.define('hotWord', {
     }
 })
 
-const img = seq.define('image', {
+const hotwordimg = seq.define('hotWordimage', {
     link: {
         type: Sequelize.STRING,
         allowNull:false
@@ -110,9 +110,58 @@ const img = seq.define('image', {
     hotWord_id: {
         type: Sequelize.INTEGER,
         allowNull:false
+    }
+})
+
+
+const hotstem = seq.define('hotStem', {
+    article: {
+        type: Sequelize.TEXT,
+        allowNull:false
     },
     type: {
         type: Sequelize.STRING,
+        allowNull:false
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull:false
+    }
+})
+
+const stemimg = seq.define('hotStemimage', {
+    link: {
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    hotStem_id: {
+        type: Sequelize.INTEGER,
+        allowNull:false
+    }
+})
+
+const technology = seq.define('technology', {
+    article: {
+        type: Sequelize.TEXT,
+        allowNull:false
+    },
+    type: {
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull:false
+    }
+})
+
+const technologyimg = seq.define('technologyimage', {
+    link: {
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    technology_id: {
+        type: Sequelize.INTEGER,
         allowNull:false
     }
 })
@@ -129,4 +178,24 @@ const answerImage = seq.define('answerImage', {
 })
 
 
-module.exports = {User,question,answer,answerImage,img,hotWord,comment}
+const banner = seq.define('banner', {
+    link: {
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    content: {
+        type: Sequelize.TEXT,
+        allowNull:false
+    },
+    title: {
+        type: Sequelize.STRING,
+        allowNull:false
+    }
+})
+
+
+module.exports = {
+    User, question, answer, answerImage, comment, banner, technology, technologyimg,
+    hotword,hotwordimg,hotstem,stemimg
+
+}

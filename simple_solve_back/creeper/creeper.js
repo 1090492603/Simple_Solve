@@ -70,7 +70,7 @@ class Creeper{
             this.obj.headers['Content-Type'] = obj.headers['Content-Type'] || 'application/json';
         } 
         
-        this.obj.headers['user-agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1';
+         this.obj.headers['user-agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'; 
        
         // 定时请求数据
 
@@ -135,15 +135,15 @@ class Creeper{
 
           //  console.log(res.text);
          
-       let cookie =  res.header['set-cookie'];
-            this.obj.headers.cookie = cookie;
+        let cookie =  res.header['set-cookie'];
+            this.obj.headers.cookie = cookie; 
             
             if (res.type.indexOf('html') !== -1) {
                 return  this.saveDataHtml(res.text);
             }
             if (res.type.indexOf('json') !== -1) {
 
-                console.log(res.body)
+              //  console.log(res.body)
               return  this.saveDataJson(res.body);
             }
 
@@ -160,7 +160,7 @@ class Creeper{
 
     setRouterUrl(url) {
         this.obj.routerUrl = url; 
-        this.obj.url = this.obj.baseUrl + url;
+        this.obj.url = this.obj.baseUrl + '/' + url;
 
         console.log(this.obj.url);
     }
@@ -186,6 +186,8 @@ class Creeper{
 
         // 进行遍历,模板有哪些选项
         for (let i in map) {
+
+           // console.log("Creeper.js第190行" + JSON.stringify(map[i]));
             
             let arr = map[i].split('.');
 
@@ -256,7 +258,7 @@ class Creeper{
             }
         } 
        
-
+        //数据过滤
         this.map.data = this.map.data.filter((item) => {
             
             for (let j in map) {
@@ -273,7 +275,7 @@ class Creeper{
 
     saveDataHtml(text) {
 
-      //  console.log(text);
+        //console.log(text);
 
         let map = this.map.data.shift();
 
@@ -283,7 +285,7 @@ class Creeper{
 
         for (let i in map) {
 
-            console.log(map[i]);
+           // console.log(map[i]);
 
                 
                 $(map[i]).each((index, item) => {

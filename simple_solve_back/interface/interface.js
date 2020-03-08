@@ -2,12 +2,25 @@ const fs = require("fs");
 
 const exec = require("../db/seq");
 
-const creeper = require("../creeper/creeper");
+const Creeper = require("../creeper/creeper");  // creeper 用于使用爬虫获取数据
 
+const data = fs.readFileSync("./data/data.json");   
+
+let obj = JSON.parse(data);
+
+const getHotWord = require("./api/getHotWord"); // 热词从小鸡词典上爬
+
+const getHotStem = require("./api/getHotStem"); // 热梗从流行语百科和犯贱志上爬
+
+const getQA = require("./api/QA");  // 问答从知乎上爬
+
+const getThem = require("./api/Them");  // 专题轮播图从知乎上爬
+
+const getTechnology = require("./api/technology")   //科技从知乎的5g专题上爬
 
 class InterfacesOfCreeper {
 
-    readFile() {
+    constructor() {
 
         let str = fs.readFileSync("./data/data.json");
         
@@ -15,14 +28,33 @@ class InterfacesOfCreeper {
         
         for (let i in data) {
             
-            let result = await this.getData(data[i])
-            
-            saveData(result.data);
+            switch ( i ) {
+               /*  
+                case "getHotWord":
+                    getHotWord(data[i]);
+                    break; */
+
+              /*   case "getHotStem":
+                    getHotStem(data[i]);
+                    break; */
+                case "getQA":
+                    getQA(data[i]);
+                    break;
+               /*  case "getThem":
+                    getThem(data[i]);
+                    break; */
+                case "getTechnology":
+                    getTechnology(data[i]);
+                        break;
+
+            }
+
+
         }
 
     }
 
-    async  getData(obj) {
+    /* async  getData(obj) {
 
         let creeper = new Creeper(obj);
     
@@ -38,11 +70,11 @@ class InterfacesOfCreeper {
         
             return data;
         
-    }
+    } */
 
-    saveData(result) {
+ /*    saveData(result) {
 
-        for (let i of result) {
+         for (let i of result) {
             
          let sql = `select exists(select 1 from hotword where name = ${i.content}) ;`
 
@@ -62,9 +94,9 @@ class InterfacesOfCreeper {
 
         }
         
-       
+        
     }
-
+ */
 }
 
-module.exports = new InterfacesOfCreeper();
+module.exports =  InterfacesOfCreeper ;
