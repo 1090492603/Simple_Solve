@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+.top-center {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 24px;
+}
+#inner-page {
+    padding-bottom: 0px;
+    padding-bottom: 20px;
+}
+.center h2, .top-center h2 {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: "微软雅黑" !important;
+}
+.lead {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+#middle {
+    background: #f2f2f2;
+}
+body > section {
+    padding: 70px 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+/*@media all and (min-width:768px)*/
+.col-sm-6 {
+    width: 50%;
+}
+#footer {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    color: #aaa;
+    background: #2e2e2e;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+#middle i.fa {
+    color: #f39c12;
+}
+.follow-us {
+    margin-top: -5px;
+    text-align: center;
+}
+.social-icon {
+    padding-top: 6px;
+    font-size: 16px;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    color: #999;
+    margin: 5px;
+}
+#c2{
+	background: #FAF0E6;
+}
+.c1 {
+	background: #EBBFC0 !important;
+	color: azure;
+}
+

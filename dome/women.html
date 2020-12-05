@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于我们</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/bootstrap1.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/aboutStyle.css">
+	<script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap1.js"></script>
+	
+	
+<style> 
+ .fixDiv{
+	 position: fixed;
+	 top: 0px;
+	 width: 100%;
+ }
+
+
+ </style>
+
+</head>
+<body  style="overflow:-Scroll;overflow-x:hidden">
+    
+    	
+ 
+    
+    
+    		<div class="container" style="height:120px">
+    			<div class="row" style="height:20px"></div>
+    			<div class="row" style="height:50px">
+    
+    				<div class="container">
+    					<div class="col-2  col-md-offset-9 col-sm-offset-9  col-xs-offset-5 ">
+    						<input type="button" value="登录|注册" class="btn-block  btn-success btn-light btn-sm">
+    					</div>
+    
+    				</div>
+    
+    
+    			</div>
+    
+    			<div class="row">
+    
+    				<div class="col-md-6  col-sm-6  col-xs-3 ">
+    
+    					<div class="container  " style="font-size:large ;font-weight: bolder;font-style: italic">
+    						<a style="text-decoration:none" class="lead">袂GAME</a>
+    					</div>
+    				</div>
+    
+    
+    
+    				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+    
+    
+    
+    
+    				<div class="col-md-5 col-sm-5  col-xs-9">
+    					<div class="container">
+    						<div class="col-md-2 col-sm-2  col-xs-3 ">
+    							<div class="dropdown" style="left:55%;  position: relative; ">
+    								<button type="button" class="btn dropdown-toggle btn-info"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="one">
+    									全部
+    									<span class="caret"></span>
+    								</button>
+    								<ul class="dropdown-menu"  id="two1" >
+    									<li role="presentation">
+    										<a role="menuitem" tabindex="" href="#">游戏</a>
+    									</li>
+    									<li role="presentation">
+    										<a role="menuitem" tabindex="" href="#">赛事</a>
+    									</li>
+    									<li role="presentation">
+    										<a role="menuitem" tabindex="" href="#">选手</a>
+    									</li>
+    									<li role="presentation" class="divider"></li>
+    									<li role="presentation">
+    										<a role="menuitem" tabindex="" href="#">直播</a>
+    									</li>
+    								</ul>
+    							</div>
+    						</div>
+    						<script type="text/javascript" charset="utf-8">
+    							$(document).ready(function(){
+    							       $('#one').hover(function() {
+    							           $("#two1").css('display', 'block');
+    							       }, function() {
+    							          $("#two1").css('display', 'none');
+    							       });
+    								
+    							       $("#two1").hover(function() {
+    							          $(this).css('display', 'block');;
+    							       }, function() {
+    							          $(this).css('display', 'none');
+    							       });
+    							})
+    							
+    							
+    						</script>
+    
+    						<div class="col-md-3 col-sm-3 col-xs-6">
+    							<div class="input-group">
+    								<input type="text" class="form-control  " id="exampleInputAmount" placeholder="Search">
+    								<span class="input-group-btn" style="position:relative; top:-1px    ">
+    									<button type="button" class="btn btn-default  glyphicon-search glyphicon"></button>
+    								</span></div>
+    						</div>
+    
+    
+    					</div>
+    
+    				</div>
+    			</div>
+    		</div>
+    
+    
+    		<div style="height: 120px;" class="hx">
+    					<nav class="navbar navbar-default  navbar-inverse " style="height: 120px;">
+    						<div class="container-fluid  ">
+    							<!-- Brand and toggle get grouped for better mobile display -->
+    							<div class="navbar-header">
+    								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+    								 aria-expanded="false">
+    									<span class="sr-only">Toggle navigation</span>
+    									<span class="icon-bar"></span>
+    									<span class="icon-bar"></span>
+    									<span class="icon-bar"></span>
+    								</button>
+    								<a class="navbar-brand" href="#">袂GAME</a>
+    							</div>
+    		
+    							<!-- Collect the nav links, forms, and other content for toggling -->
+    							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    								<ul class="nav navbar-nav">
+    									<li><a href="index.html" target="_blank">主页<span class="sr-only">(current)</span></a></li>
+    		
+    									<li class="dropdown">
+    										<a href="game.html" target="_blank" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+    										 aria-expanded="false" id="hh" onclick="a1()">游戏
+    											<span class="caret"></span></a>
+    										<ul class="dropdown-menu" style="display:none;" id="caidan">
+    											<li><a href="https://www.dota2.com.cn/index.htm" target="_blank">DOTA2</a></li>
+    											<li><a href="http://sc2.blizzard.cn/home/" target="_blank">星际争霸</a></li>
+    											<li><a href="http://dz.blizzard.cn/" target="_blank">魔兽争霸</a></li>
+    											<li><a href="https://lol.qq.com/" target="_blank">英雄联盟</a></li>
+    											<li role="separator" class="divider" target="_blank"></li>
+    											<li><a href="http://pubg.qq.com/main.shtml" target="_blank">绝地求生</a></li>
+    											<li role="separator" class="divider"></li>
+    											<li><a href="https://pvp.qq.com/" target="_blank">王者荣耀</a></li>
+    										</ul>
+    									</li>
+    									<li><a href="zhibo.html" target="_blank">直播</a><span class="sr-only">(current)</span></li>
+    									<li><a href="xuanshou.html#abc" target="_blank">选手</a><span class="sr-only">(current)</span></li>
+    									<li><a href="xuanshou.html" target="_blank">俱乐部</a><span class="sr-only">(current)</span></li>
+    		
+    									<ul class="nav navbar-nav">
+    										<li class="dropdown">
+    											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+    											 id="hh1">赛事
+    												<span class="caret"></span></a>
+    											<ul class="dropdown-menu" style="display:none;" id="caidan1">
+    												<li><a href="https://lpl.qq.com/" target="_blank">LPL</a></li>
+    												<li><a href="http://s.163.com/special/wcs2016cn/" target="_blank">WCS</a></li>
+    												<li><a href="http://gleague.gamefy.cn/live.php" target="_blank">G联赛</a></li>
+    												<li role="separator" class="divider" target="_blank"></li>
+    												<li><a href="pvp.qq.com/webplat/info/news_version3/15592/22661/22664/25563/m14593/list_1.shtml
+    												"
+    													 target="_blank">KPL</a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    									<li><a href="wenhua.html" target="_blank">文化</a></li>
+    									<li class="active"><a href="women.html" target="_blank" class="navbar-right">关于我们</a>
+    								</ul>
+    							</div><!-- /.navbar-collapse -->
+    		<script type="text/javascript" charset="utf-8">
+    			function a1() {
+    				window.open("game.html", "_blank");
+    			}
+    			
+    		</script>
+    
+    				<span class="navbar-right">
+    					<span class="top-social-info ">
+    						<a href="#" data-toggle="tooltip" data-placement="top" title="QQ" style="position: relative;right: 300%; color: #ccc;"><i
+    							 class="fa fa-qq" aria-hidden="true"></i></a>
+    						<a href="#" data-toggle="tooltip" data-placement="top" title="微信" style="position: relative;right: 250%;color: #ccc; "><i
+    							 class="fa fa-weixin" aria-hidden="true"></i></a>
+    						<a href="#" data-toggle="tooltip" data-placement="top" title="微博" style="position: relative;right: 200%;color: #ccc;"><i
+    							 class="fa fa-weibo" aria-hidden="true"></i></a>
+    						<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" style="position: relative;right: 150%;color: #ccc;"><i
+    							 class="fa fa-facebook" aria-hidden="true"></i></a>
+    						<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" style="position: relative;right: 100%;color: #ccc;"><i
+    							 class="fa fa-twitter" aria-hidden="true"></i></a>
+    					</span>
+    
+    				</span>
+    			</nav>
+    		</div>
+    
+    <script  type="text/javascript" charset="utf-8">
+    	
+    	$(document).ready(function(){
+            $('#hh').hover(function() {
+                $("#caidan").css('display', 'block');
+            }, function() {
+               $("#caidan").css('display', 'none');
+            });
+    
+            $("#caidan").hover(function() {
+               $(this).css('display', 'block');;
+            }, function() {
+               $(this).css('display', 'none');
+            });
+     })
+    	$(document).ready(function(){
+    	       $('#hh1').hover(function() {
+    	           $("#caidan1").css('display', 'block');
+    	       }, function() {
+    	          $("#caidan1").css('display', 'none');
+    	       });
+    	
+    	       $("#caidan1").hover(function() {
+    	          $(this).css('display', 'block');;
+    	       }, function() {
+    	          $(this).css('display', 'none');
+    	       });
+    	})
+    	
+    	
+    	
+    </script>
+	<div id="c2">
+	<div class="top-center">
+    <h2>关于我们</h2>
+    <p class="lead">我们的项目构成，项目介绍以及团队介绍<br>
+      后期计划，团队分工</p>
+  </div>
+	<div class="container">
+    <div class="about-us">
+      <div class="row">
+        <div class="col-md-4 col-sm-6"><img class="img-responsive" alt="" src="images/meizhuo.jpg"> </div>
+        <div class="col-md-4 col-sm-6">
+          <h3>我们团队是</h3>
+          <p>前端工程师----蔡贤涛，江国劲</p>
+          <p>测试工程师----蔡贤涛</p>
+          <p>UI设计师----蔡贤涛</p>
+          <p>
+             诀电竞是致力于为电竞提供应用服务保障的服务性平台，为你提供游戏介绍，游戏直播介绍服务。平台以用户的手机、PC等便携式终端设备为载体，无论用户身在何处，都可以及时获取所有电竞相关的信息。
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <h3>项目介绍</h3>
+          <p><strong>项目的作用</strong><br>
+            诀电竞是一款帮助用户了解电竞，了解直播平台，了解各种电竞时事赛事，给用户带来电竞乐趣的应用。有良好的拓展性和维护性，可以轻松进行网页的改版。</p>
+          <p><strong>技术手段</strong><br>
+            结构采用了流行的bootstrap框架和jquery工具库,进行了PC端和移动端的屏幕适配，兼容各种主流浏览器，让用户可以在手机端和电脑端切换自如。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	</div>
+	<section id="middle">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>后续计划</h3>
+        <br>
+        <div class="media"> <i class="fa fa-play-circle pull-left fa-3x"></i>
+          <div class="media-body">
+            <h3 class="media-heading"> 计划增加直播功能 </h3>
+            直播各种电竞与游戏</div>
+        </div>
+        <br>
+        <div class="media"> <i class="fa fa-group pull-left fa-3x"></i>
+          <div class="media-body">
+            <h3 class="media-heading"> 计划增加群组功能 </h3>
+            可以建群，加强联系，组成小组织，参加活动</div>
+        </div>
+        <br>
+        <div class="media"> <i class="fa fa-comments pull-left fa-3x"></i>
+          <div class="media-body">
+            <h3 class="media-heading"> 计划增加聊天功能 </h3>
+           可以添加好友，联系好友，即时聊天，一起度过聊天组队开黑</div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="accordion">
+          <h3>项目着重点</h3>
+          <br>
+          <div>
+            <ul class="progess-bars">
+                <li>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">设计 90%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">结构布置 85%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">拓展性 80%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">浏览器兼容性 85%</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">屏幕适配 95%</div>
+                    </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">Copyright © 2019 All Rights Reserved.</div>
+
+    </div>
+  </div>
+</footer>
+		<script>
+	 $(function(){
+        var banOffTop=$(".hx").offset().top;//获取到距离顶部的垂直距离
+        var scTop=0;//初始化垂直滚动的距离
+        $(document).scroll(function(){
+            scTop=$(this).scrollTop();//获取到滚动条拉动的距离
+            //console.log(scTop);查看滚动时，垂直方向上，滚动条滚动的距离
+            if(scTop>=banOffTop){
+            //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+                $(".hx").addClass("fixDiv");
+            }else{
+                $(".hx").removeClass("fixDiv");
+            }
+
+        })
+    })
+		</script>
+		
+	
+    
+    
+  
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
